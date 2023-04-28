@@ -1,0 +1,6 @@
+workspace(name = "int")
+
+local_repository(
+    name = "ext",
+    path = "../ext",
+)

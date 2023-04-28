@@ -1,0 +1,15 @@
+build --features=external_include_paths
+
+build --cxxopt=-Wall
+build --cxxopt=-Wextra
+build --cxxopt=-Wpedantic
+build --cxxopt=-Werror
+
+build:clang --repo_env=CC=clang
+build:clang --repo_env=CXX=clang++
+# build:clang --cxxopt=--system-header-prefix=src
+build --config=clang
+
+build:gcc --repo_env=CC=gcc
+build:gcc --repo_env=CXX=g++
+# build --config=gcc
